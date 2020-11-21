@@ -1,0 +1,4 @@
+graft Competition/app/static
+graft Competition/app/templates
+global-exclude *.pyc
+include Competition/app/database/schema.sql

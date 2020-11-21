@@ -1,0 +1,81 @@
+<div class="card">
+    <form method="post" action="">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    </form>
+    <div class="card-header card-header-tabs card-header-primary">
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+                <span class="nav-tabs-title"></span>
+                <ul class="nav nav-tabs nav-justified" data-tabs="tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#single" data-toggle="tab" onclick="getNewSingles();">
+                            <i class="material-icons">title</i> 单选
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#multiple" data-toggle="tab" onclick="getNewMultiples();">
+                            <i class="material-icons">text_fields</i> 多选
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#determine" data-toggle="tab" onclick="getNewDetermines();">
+                            <i class="material-icons">done_outline</i> 判断
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#response" data-toggle="tab" onclick="getNewResposes();">
+                            <i class="material-icons">translate</i> 简答
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#competition" data-toggle="tab" id="nav-competition">
+                            <i class="material-icons">touch_app</i> 抢答
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="tab-content">
+            <div class="tab-pane" id="single">
+                {% include "main/single.html" %}
+            </div>
+            <div class="tab-pane" id="multiple">
+                {% include "main/multiple.html" %}
+            </div>
+            <div class="tab-pane" id="determine">
+                {% include "main/determine.html" %}
+            </div>
+            <div class="tab-pane" id="response">
+                {% include "main/response.html" %}
+            </div>
+            <div class="tab-pane active" id="competition">
+                <div class="list-group radio-competition">
+                    {% for item in names %}
+                        {#                        <div class="raw">#}
+                        {#                        <div class="col-xs-4 col-md-3" >#}
+                        <div class="form-check form-check-radio">
+                            <label class="form-check-label table-td-option">
+                                <input class="form-check-input competition-radios" type="radio"
+                                       name="competition-radios" id="competition-radios-id" value="{{ item|e }}"
+                                       onclick="assignedName();">
+                                {{ item|e }}
+                                <span class="circle"><span class="check"></span>
+                                    </span>
+                            </label>
+                        </div>
+                        {#                        </div>#}
+                        {#                        </div>#}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

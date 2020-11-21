@@ -1,0 +1,34 @@
+<table class="table">
+    <form method="post" action="">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    </form>
+    <caption class="caption">
+        {{ single_topic|e }}
+    </caption>
+    <tbody>
+    {% for item in singles %}
+        <tr>
+            <td style="width: 2em">
+                <div class="form-check form-check-radio form-check-inline">
+                    <label class="form-check-label table-td-option">
+                        <input class="form-check-input single-radios" type="radio" name="single-radios"
+                               id="single-radios-id"
+                               value="{{ item|e }}">
+                        {{ item|e }}
+                        <span class="circle"><span class="check"></span></span>
+                    </label>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div>
+    <div id="text-single-select-answer-corr" class="text-answer-show-corr" style="visibility: hidden">
+        {{ single_answer|e }}
+    </div>
+    <div id="text-single-select-answer" class="text-answer-show" style="visibility: hidden"></div>
+    <div class="btn-answer-show">
+        <button id="single_summit" type="button" class="btn btn-primary" onclick="checkSingleAnswer();">确定</button>
+    </div>
+</div>

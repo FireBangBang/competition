@@ -1,0 +1,28 @@
+<div class="card card-nav-tabs">
+    <form method="post" action="">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    </form>
+    <div class="card-header card-header-danger rules-board-header">
+        比赛积分规则
+    </div>
+    <div class="rules-board-h1 rules-board-h1-head">
+        一、抢答题
+    </div>
+    <ul class="list-group list-group-flush rules-board-content-header">
+        <li class="list-group-item">单选题答对加<span class="rules-board-emphasize">1</span>分，答错扣<span
+                class="rules-board-emphasize">1</span>分。
+        </li>
+        <li class="list-group-item">多选题答对加<span class="rules-board-emphasize">2</span>分，答错扣<span
+                class="rules-board-emphasize">2</span>分。
+        </li>
+        <li class="list-group-item">判断题答对加<span class="rules-board-emphasize">1</span>分，答错扣<span
+                class="rules-board-emphasize">1</span>分。
+        </li>
+    </ul>
+    <div class="rules-board-h1 rules-board-h1-foot">
+        二、必答题
+    </div>
+    <ul class="list-group list-group-flush rules-board-content-footer">
+        <li class="list-group-item">每组1道简答题<span class="rules-board-emphasize">20</span>分，裁判评分。</li>
+    </ul>
+</div>

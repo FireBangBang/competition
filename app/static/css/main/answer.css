@@ -1,0 +1,81 @@
+.caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #606060;
+    caption-side: top;
+}
+
+.table-td-option {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #606060;
+}
+
+.table .btn-select-answer {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #606060;
+}
+
+.form-check-sign-text {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #606060;
+}
+
+.text-answer-show {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #ff0000;
+    float: left;
+}
+
+.btn-answer-show {
+    float: right;
+}
+
+.input-response-score {
+    font-size: 1.5em;
+    font-weight: bold;
+    float: right;
+}
+
+.btn-response-score-summit {
+    float: left;
+}
+
+.radio-competition {
+    alignment: center;
+    padding: 0.5em;
+}
+
+.rules-board-header {
+    font-weight: bold;
+}
+
+.rules-board-h1 {
+    font-size: 0.875em;
+    margin-left: 1.5em;
+    font-weight: bold;
+}
+
+.rules-board-h1-head {
+    margin-top: 2em;
+}
+
+rules-board-h1-foot {
+    margin-bottom: 1em;
+}
+
+.rules-board-content-header {
+    margin-top: 1em;
+}
+
+.rules-board-content-footer {
+    margin-bottom: 1em;
+}
+
+.rules-board-emphasize {
+    font-weight: bold;
+    color: #ff0000;
+}

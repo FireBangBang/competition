@@ -1,0 +1,54 @@
+{% extends "common/base.html" %}<!--继承基础模板-->
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/css/minor/score.css?v={{ range(1,10000) | random }}">
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title ">Simple Table</h4>
+                            <p class="card-category"> Here is a subtitle for this table</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    {#                      {{form.csrf_token}}#}
+                                    {% for head in headers %}
+                                        <th><strong>{{ head|e }}</strong></th>
+                                    {% endfor %}
+                                    </thead>
+                                    <tbody>
+                                    {% for user in users %}
+                                        <tr>
+                                            {% for value in user %}
+                                                {% if loop.index == 2 %}
+                                                    <td><strong>{{ value|e }}</strong></td>
+                                                {% else %}
+                                                    <td>{{ value|e }}</td>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+    {{ super() }}
+    <script src="../static/js/minor/score.js?v={{ range(1,10000) | random }}"></script>
+
+{% endblock %}
