@@ -175,6 +175,6 @@ def update_db_from_net(dic):
         user.resp_score += dic["score"]
         user.resp_count += 1
         if dic["score"] > 0:
-            user.deter_corr += 1
+            user.resp_corr += 1
 
     db.update_users(user)
