@@ -42,9 +42,10 @@ class Db(object):
         self.__init_users()
         self.write_to_excel(url_write, "成绩")
 
-        self.init_db(app)
-        app.teardown_appcontext(self.close_db)
-        app.cli.add_command(self.init_db_command)
+        # 数据库初始化
+        # self.init_db(app)
+        # app.teardown_appcontext(self.close_db)
+        # app.cli.add_command(self.init_db_command)
 
     @vthread.pool(5)  # 在线程数为5的线程池中执行
     @vthread.atom  # 原子操作
