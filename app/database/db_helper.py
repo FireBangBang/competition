@@ -189,9 +189,9 @@ class Db(object):
     #             detect_types=sqlite3.PARSE_DECLTYPES
     #         )
     #         g.db.row_factory = sqlite3.Row
-
-        print(g.db)
-        return g.db
+    #
+    #     print(g.db)
+    #     return g.db
 
     def close_db(self, e=None):
         db = g.pop('db', None)
