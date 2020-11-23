@@ -367,7 +367,7 @@ class pool:
         def _func():
             while True:
                 time.sleep(.25)
-                if not main_thread().isAlive() and all(map(lambda i:i.empty(),self._monitor_run_num.values())):
+                if not main_thread().is_alive() and all(map(lambda i:i.empty(),self._monitor_run_num.values())):
                     self.close_all()
                     break
         if not self._monitor:
