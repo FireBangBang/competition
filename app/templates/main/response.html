@@ -1,32 +1,32 @@
 <table class="table">
-    <form method="post" action="">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-    </form>
-    <tbody>
-    <tr>
-        <td class="caption ">{{ response_topic|e }}</td>
-    </tr>
-    </tbody>
+  <form method="post" action="">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  </form>
+  <tbody>
+  <tr>
+    <td class="caption ">{{ response_topic|e }}</td>
+  </tr>
+  </tbody>
 </table>
 <div>
-    <div id="text-response-answer-corr" class="text-answer-show" style="visibility: hidden">
-        {{ response_answer|e }}
-    </div>
-    <div id="text-response-score-board" style="visibility: hidden">
-        <div class="input-group">
-            <div class="input-group-prepend">
+  <div id="text-response-answer-corr" class="text-answer-show" style="visibility: hidden">
+    {{ response_answer|e }}
+  </div>
+  <div id="text-response-score-board" style="visibility: hidden">
+    <div class="input-group">
+      <div class="input-group-prepend">
                                 <span class="input-group-text">
                                     <i class="material-icons">edit</i>
                                 </span>
-            </div>
-            <input id="text-response-score-input" type="text" class="form-control input-response-score" placeholder=""
-                   oninput="value=value.replace(/[^\d]/g,'')">
-        </div>
-        <button id="response_score_summit" type="button" class="btn btn-primary btn-answer-show"
-                onclick="scoreResponseAnswer();">评分
-        </button>
+      </div>
+      <input id="text-response-score-input" type="text" class="form-control input-response-score" placeholder=""
+             oninput="value=value.replace(/[^\d]/g,'')">
     </div>
-    <div class="btn-answer-show">
-        <button id="response_summit" type="button" class="btn btn-primary" onclick="showResponseAnswer();">显示答案</button>
-    </div>
+    <button id="response_score_summit" type="button" class="btn btn-primary btn-answer-show"
+            onclick="scoreResponseAnswer();">评分
+    </button>
+  </div>
+  <div class="btn-answer-show">
+    <button id="response_summit" type="button" class="btn btn-primary" onclick="showResponseAnswer();">显示答案</button>
+  </div>
 </div>

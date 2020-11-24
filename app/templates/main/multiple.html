@@ -1,34 +1,34 @@
 <table class="table">
-    <form method="post" action="">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-    </form>
-    <caption class="caption">
-        {{ multiple_topic|e }}
-    </caption>
-    <tbody>
-    {% for item in multiples %}
-        <tr>
-            <td style="width: 2em">
-                <div class="form-check">
-                    <label class="form-check-label table-td-option">
-                        <input class="form-check-input multiple-checkboxes" type="checkbox" value="{{ item|e }}">
-                        {#                                                {{ item|e }}#}
-                        <span class="form-check-sign"><span class="check"></span>
+  <form method="post" action="">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  </form>
+  <caption class="caption">
+    {{ multiple_topic|e }}
+  </caption>
+  <tbody>
+  {% for item in multiples %}
+    <tr>
+      <td style="width: 2em">
+        <div class="form-check">
+          <label class="form-check-label table-td-option">
+            <input class="form-check-input multiple-checkboxes" type="checkbox" value="{{ item|e }}">
+            {#                                                {{ item|e }}#}
+            <span class="form-check-sign"><span class="check"></span>
                                             </span>
-                    </label>
-                </div>
-            </td>
-            <td class="table-td-option">{{ item|e }}</td>
-        </tr>
-    {% endfor %}
-    </tbody>
+          </label>
+        </div>
+      </td>
+      <td class="table-td-option">{{ item|e }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
 </table>
 <div>
-    <div id="text-multiple-select-answer-corr" class="text-answer-show-corr" style="visibility: hidden">
-        {{ multiple_answer|e }}
-    </div>
-    <div id="text-multiple-select-answer" class="text-answer-show" style="visibility: hidden"></div>
-    <div class="btn-answer-show">
-        <button id="multiple_summit" type="button" class="btn btn-primary" onclick="checkMultipleAnswer();">确定</button>
-    </div>
+  <div id="text-multiple-select-answer-corr" class="text-answer-show-corr" style="visibility: hidden">
+    {{ multiple_answer|e }}
+  </div>
+  <div id="text-multiple-select-answer" class="text-answer-show" style="visibility: hidden"></div>
+  <div class="btn-answer-show">
+    <button id="multiple_summit" type="button" class="btn btn-primary" onclick="checkMultipleAnswer();">确定</button>
+  </div>
 </div>

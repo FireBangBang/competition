@@ -1,29 +1,29 @@
 {% extends "common/base.html" %}<!--继承基础模板-->
 {% block css %}
-    {{ super() }}
-    <link rel="stylesheet" href="../static/css/common/nm-form.css?v={{ range(1,10000) | random }}">
-    <link rel="stylesheet" href="../static/css/main/answer.css?v={{ range(1,10000) | random }}">
+  {{ super() }}
+  <link rel="stylesheet" href="../static/css/common/nm-form.css?v={{ range(1,10000) | random }}">
+  <link rel="stylesheet" href="../static/css/main/answer.css?v={{ range(1,10000) | random }}">
 {% endblock %}
 {% block content %}
-    <form method="post" action="">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-    </form>
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8 col-md-12">
-                    {% include "main/topic_board.html" %}
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    {% include "main/rules.html" %}
-                </div>
-            </div>
+  <form method="post" action="">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  </form>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 col-md-12">
+          {% include "main/topic_board.html" %}
         </div>
+        <div class="col-lg-4 col-md-12">
+          {% include "main/rules.html" %}
+        </div>
+      </div>
     </div>
+  </div>
 {% endblock content %}
 
 {% block js %}
-    {{ super() }}
-    <script src="../static/js/main/answer.js?v={{ range(1,10000) | random }}"></script>
+  {{ super() }}
+  <script src="../static/js/main/answer.js?v={{ range(1,10000) | random }}"></script>
 
 {% endblock %}

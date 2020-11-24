@@ -1,37 +1,37 @@
 <table class="table">
-    <form method="post" action="">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-    </form>
-    <tbody>
-    <tr>
-        <td class="caption ">{{ determine_topic|e }}</td>
-        <td width="20%">
-            <div class="form-check form-check-radio">
-                <label class="form-check-label table-td-option">
-                    <input class="form-check-input determine-radios" type="radio" name="determine-radios"
-                           id="determine-radios-id-t" value="T">
-                    正确
-                    <span class="circle"><span class="check"></span></span>
-                </label>
-            </div>
-            <div class="form-check form-check-radio">
-                <label class="form-check-label table-td-option">
-                    <input class="form-check-input determine-radios" type="radio" name="determine-radios"
-                           id="determine-radios-id-f" value="F">
-                    错误
-                    <span class="circle"><span class="check"></span></span>
-                </label>
-            </div>
-        </td>
-    </tr>
-    </tbody>
+  <form method="post" action="">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  </form>
+  <tbody>
+  <tr>
+    <td class="caption ">{{ determine_topic|e }}</td>
+    <td width="20%">
+      <div class="form-check form-check-radio">
+        <label class="form-check-label table-td-option">
+          <input class="form-check-input determine-radios" type="radio" name="determine-radios"
+                 id="determine-radios-id-t" value="T">
+          正确
+          <span class="circle"><span class="check"></span></span>
+        </label>
+      </div>
+      <div class="form-check form-check-radio">
+        <label class="form-check-label table-td-option">
+          <input class="form-check-input determine-radios" type="radio" name="determine-radios"
+                 id="determine-radios-id-f" value="F">
+          错误
+          <span class="circle"><span class="check"></span></span>
+        </label>
+      </div>
+    </td>
+  </tr>
+  </tbody>
 </table>
 <div>
-    <div id="text-determine-answer-corr" class="text-answer-show-corr" style="visibility: hidden">
-        {{ determine_answer|e }}
-    </div>
-    <div id="text-determine-answer" class="text-answer-show" style="visibility: hidden"></div>
-    <div class="btn-answer-show">
-        <button id="determine_summit" type="button" class="btn btn-primary" onclick="checkDetermineAnswer();">确定</button>
-    </div>
+  <div id="text-determine-answer-corr" class="text-answer-show-corr" style="visibility: hidden">
+    {{ determine_answer|e }}
+  </div>
+  <div id="text-determine-answer" class="text-answer-show" style="visibility: hidden"></div>
+  <div class="btn-answer-show">
+    <button id="determine_summit" type="button" class="btn btn-primary" onclick="checkDetermineAnswer();">确定</button>
+  </div>
 </div>
